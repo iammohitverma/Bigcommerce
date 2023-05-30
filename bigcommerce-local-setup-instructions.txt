@@ -1,0 +1,100 @@
+Create app
+go to bigcommerce > settings > API > Store-level API accounts > Create API Account
+Use Token type *Stencil CLI token*
+Enter API Name
+
+Your API is created successfully (with publish option)
+
+Copy and save Access token
+cnv0t0fqwcxhb5wbidevc672uusxef
+Copy and save Terminal Quickstart
+stencil init --url https://test-store-e110.mybigcommerce.com --token cnv0t0fqwcxhb5wbidevc672uusxef 
+
+
+
+
+
+///******************************************************///
+///******************************************************///
+///******************************************************///
+
+
+
+
+Further steps URL:-
+https://developer.bigcommerce.com/stencil-docs/installing-stencil-cli/live-previewing-a-theme
+
+
+
+Installation Stencil CLI
+Use Powershell for command
+==========================
+
+# Install Chocolatey
+iex ((New-Object System.Net.WebClient).DownloadString("https://chocolatey.org/install.ps1"))
+ 
+# Install git if you don't have it
+choco install git
+ 
+# Install nvm windows and stencil-compatible node.js
+ 
+choco install nvm; nvm install 18.15.0; nvm use 18.15.0
+ 
+# Install Stencil CLI
+npm install -g @bigcommerce/stencil-cli
+
+
+after install stencil check is successfully install in your system by command
+stencil 
+
+
+///******************************************************///
+///******************************************************///
+///******************************************************///
+
+
+Once you've installed Stencil CLI, the next step on the road to 
+theme development is downloading
+a theme to edit and previewing live changes using Stencil CLI's powerful Browsersync functionality.
+
+
+
+# move into theme dir
+cd ~/path/to/theme/dir
+
+# install theme modules
+npm install
+
+# initialize a new .stencil config for the theme
+stencil init
+
+# serve a live, Browsersync enabled preview of the theme
+stencil start
+
+
+
+stencil init --url https://test-store-e110.mybigcommerce.com --token qngodymqgd1kns9fq2rcklxpqs1peh3 --port 3000
+stencil init --url https://test-store-e110.mybigcommerce.com --token q55kranmmtlhlazay7putprpczjd05z 
+
+
+# ...
+[Browsersync] Proxying: http://localhost:3001
+[Browsersync] Access URLs:
+ --
+       Local: http://localhost:3000  # preview real-time changes on your local machine
+    External: http://10.4.10.71:3000 # preview real-time changes across multiple devices
+ --
+          UI: http://localhost:3002
+ UI External: http://10.4.10.71:3002
+ --
+[Browsersync] Watching files...
+
+
+
+when change work is done on local preview  http://localhost:3000 
+
+Push into live using command 
+stencil
+see all commands there
+stencil push
+now your changes push into live
